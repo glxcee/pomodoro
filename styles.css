@@ -1,0 +1,168 @@
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 2;
+    overflow: hidden;
+    color: #323030;
+}
+
+h1 {
+    font-family: 'DS-Digital', sans-serif;
+    font-size: 85px;
+    transition: all 2s;
+    margin-bottom: -50px;
+}
+
+h6 {
+  font-family: 'DS-Digital', sans-serif;
+  font-size: 20px;
+  transition: all 3s;
+  margin-bottom: 20px;
+  opacity: 0;
+  color: #383434;
+}
+
+h5 {
+  font-family: 'DS-Digital', sans-serif;
+  font-size: 30px;
+  margin-bottom: -50px;
+  color: white;
+  border: #fa3600 solid;
+  border-radius: 10px;
+  background-color: #fa3600;
+}
+
+.back {
+  font-size: 70px;
+  color: #fa3600
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 110%;
+}
+
+button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa3600;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  transition: all 250ms;
+  touch-action: manipulation;
+}
+
+button:focus {
+  background-color: #fa3600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background-color: #ff7b6a;
+}
+
+button:active {
+  background-color: #ab482d;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+input {
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin: 1em;
+    transition: opacity 3s
+}
+
+input:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #0069ba;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+label {
+  transition: all 3s;
+}
+
+
+.hand {
+  position: fixed;
+  top: calc(100% - 99vh);
+  left: 50%;
+  height: 200vh;
+  width: 5px;
+  background-color: black;
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+.half {
+  transform: rotate(-90deg);
+}
+
+#rainspace { 
+  position: relative; 
+} 
+
+#raincontainer { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  z-index: -2; 
+} 
+
+.rain {
+  opacity: 0;
+  transition: all 3s;
+  border: 2px solid #868686;
+  background-color: #bababa;
+  animation: rain 5s infinite;
+}
+@keyframes rain {
+  0% {border-radius: 58% 42% 48% 53% / 47% 60% 36% 53%;}
+  20% {border-radius: 48% 42% 48% 53% / 47% 60% 36% 53%;}
+  40% {border-radius: 48% 42% 48% 53% / 58% 42% 48% 53%;}
+  55% {border-radius: 47% 60% 36% 53% / 58% 42% 48% 53%;}
+  70% {border-radius: 47% 60% 36% 53% / 48% 42% 48% 53%;}
+  85% {border-radius: 58% 42% 48% 53% / 48% 42% 48% 53%;}
+  100% {border-radius: 58% 42% 48% 53% / 47% 60% 36% 53%;}
+  }
+
+.dropped {
+  opacity: 0.5;
+}
+
+.cleaned {
+  border-radius: 0px;
+  opacity: 0;
+}
